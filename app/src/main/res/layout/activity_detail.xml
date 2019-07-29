@@ -4,38 +4,60 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorSecondaryBlue"
     tools:context=".DetailActivity">
+
+    <TextView
+        android:id="@+id/labelKegiatan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/nextartbold"
+        android:text="KEGIATAN"
+        android:textColor="@color/colorWhite"
+        android:textSize="25dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/labelNamaKegiatan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="100dp"
         android:layout_marginRight="10dp"
+        android:fontFamily="@font/osbold"
         android:text="Nama Kegiatan"
+        android:textColor="@color/colorWhite"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/labelKegiatan" />
 
     <EditText
         android:id="@+id/edtTxt_namaKegiatan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="17dp"
         android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="@font/osregular"
+        android:hint="Isi nama kegiatanmu ya!"
         android:inputType="text"
-        android:layout_marginRight="10dp"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorGrey"
         app:layout_constraintTop_toBottomOf="@id/labelNamaKegiatan" />
 
     <TextView
         android:id="@+id/labelKeterangan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="@font/osbold"
         android:text="Keterangan"
+        android:textColor="@color/colorWhite"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/edtTxt_namaKegiatan" />
@@ -44,20 +66,26 @@
         android:id="@+id/edtTxt_keterangan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="17dp"
         android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="@font/osregular"
+        android:hint="Detailnya juga!"
         android:inputType="text"
-        android:layout_marginRight="10dp"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorGrey"
         app:layout_constraintTop_toBottomOf="@id/labelKeterangan" />
 
     <TextView
         android:id="@+id/labelWaktu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="10dp"
+        android:fontFamily="@font/osbold"
         android:text="Waktu"
+        android:textColor="@color/colorWhite"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/edtTxt_keterangan" />
@@ -66,42 +94,72 @@
         android:id="@+id/edtTxt_waktu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:inputType="time"
+        android:layout_marginLeft="17dp"
         android:layout_marginTop="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="@font/osregular"
+        android:hint="Jam berapa hayo?"
+        android:inputType="text"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorGrey"
         app:layout_constraintTop_toBottomOf="@id/labelWaktu" />
 
     <Button
         android:id="@+id/btnTambah"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="10dp"
-        android:text="Tambahkan"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/button"
         android:onClick="onClickTambahData"
+        android:textSize="15dp"
+        android:fontFamily="@font/osbold"
+        android:text="Tambahkan"
         app:layout_constraintTop_toBottomOf="@id/edtTxt_waktu" />
+
+    <!-- Button Ubah -->
+    <Button
+        android:id="@+id/btnUbah"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/button"
+        android:textSize="15dp"
+        android:fontFamily="@font/osbold"
+        android:onClick="onClickUbahData"
+        android:text="Ubah"
+        app:layout_constraintTop_toBottomOf="@id/btnTambah" />
 
     <Button
         android:id="@+id/btnSelesai"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginRight="20dp"
+        android:textSize="15dp"
+        android:fontFamily="@font/osbold"
+        android:background="@drawable/button"
+        android:onClick="onClickSelesai"
         android:text="Selesai"
-        app:layout_constraintTop_toBottomOf="@id/btnTambah" />
+        app:layout_constraintTop_toBottomOf="@id/btnUbah" />
 
     <Button
         android:id="@+id/btnKembali"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="15dp"
+        android:fontFamily="@font/osbold"
         android:layout_marginTop="10dp"
-        android:layout_marginRight="10dp"
-        android:text="Kembali"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/secondary_button"
         android:onClick="onClickBackMainMenu"
+        android:textColor="@color/colorWhite"
+        android:text="Kembali"
         app:layout_constraintTop_toBottomOf="@id/btnSelesai" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

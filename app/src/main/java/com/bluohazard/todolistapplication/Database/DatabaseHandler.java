@@ -125,4 +125,11 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         return db.update(TABLE_TODO, values, KEY_ID + " = ?",
                 new String[]{String.valueOf(toDoList.getId())});
     }
+
+    public void deleteModel(ToDoList toDoList) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(TABLE_TODO, KEY_ID + " = ?",
+                new String[] { String.valueOf(toDoList.getId()) });
+        db.close();
+    }
 }

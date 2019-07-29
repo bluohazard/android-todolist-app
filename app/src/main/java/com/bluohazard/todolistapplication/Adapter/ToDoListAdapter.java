@@ -18,7 +18,8 @@ public class ToDoListAdapter extends
         RecyclerView.Adapter<ToDoListAdapter.DaftarViewHolder> {
     private List<ToDoList> listToDo = new ArrayList<>();
 
-    public ToDoListAdapter(List<ToDoList> listToDo) {
+    public ToDoListAdapter(List<ToDoList> listToDo)
+    {
         this.listToDo = listToDo;
     }
 

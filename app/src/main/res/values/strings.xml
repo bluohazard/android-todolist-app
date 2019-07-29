@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">Todo List Application</string>
-    <string name="buat_baru">[+] Buat Baru...</string>
+    <string name="app_name">Todo List</string>
+    <string name="buat_baru">Buat Kegiatan</string>
 </resources>
